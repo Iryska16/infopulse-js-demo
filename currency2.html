@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>  </title>
+</head>
+<body>
+<script>
+
+    var currency, quantity;
+
+    do {
+        currency = prompt('В яку валюту ви бажаєте конвертувати (USD, EUR, RUB)?');
+        if(currency == null) break;
+        quantity = prompt('Скільки коштів ви бажаєте конвертувати?');
+        if(quantity == null) break;
+
+        switch(currency.toUpperCase()) {
+            case 'USD':
+                console.log(quantity/25);
+                alert(quantity/25);
+                break;
+            case 'RUB':
+                console.log(quantity/0.35);
+                alert(quantity/0.35);
+                break;
+            case 'EUR':
+                console.log(quantity/27);
+                alert(quantity/27);
+                break;
+            default:
+                console.log("Ви ввели некоректні дані");
+                alert("Ви ввели некоректні дані");
+                break;
+        }
+    } while(true);
+
+
+</script>
+</body>
+</html>
